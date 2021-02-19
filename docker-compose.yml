@@ -1,0 +1,20 @@
+version: "3"
+services:
+  mysql:
+    container_name: jfv-mysql
+    image: mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: test123
+      MYSQL_DATABASE: laravel
+  redis:
+    container_name: jfv-redis
+    image: redis
+    ports:
+      - "6382:6379"
+  metabase:
+    container_name: jfv-metabase
+    image: metabase/metabase
+    ports:
+      - "3000:3000"
